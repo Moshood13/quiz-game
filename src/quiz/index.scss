@@ -1,9 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Handjet&family=Quantico&display=swap');
+
+/* font-family: 'Quantico', sans-serif;
+font-family: 'Wallpoet', cursive; */
+
 .quizapp {
     display: flex;
 
-    .question {
+
+    .question-box {
         flex: 3;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.658), rgba(7, 3, 51, 0.863)), url("../asset/bg.jpeg") cover no-repeat;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.658), rgba(7, 3, 51, 0.863)), url("../asset/bg.jpg");
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+
+        .timer {
+            color: #FFF;
+            font-size: 2.5em;
+            border: 5px solid #ffffff57;
+            border-radius: 100px;
+            padding: 10px;
+            width: 50px;
+            margin: 0 100px;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            margin-top: 200px;
+
+            .time {
+                font-family: 'Handjet', cursive;
+            }
+
+            .s {
+                opacity: 0.5;
+                font-size: 26px;
+            }
+        }
+
+        .question {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px auto;
+            border: 3px solid #ffffff57;
+            width: 85%;
+            border-radius: 20px;
+            
+
+            .quest {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 800;
+                font-family: 'Barlow Condensed', sans-serif;
+            }
+        }
+        .options {
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+            
+            .opt-box {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 40px;
+
+                .option {
+                    color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    border: 1px solid #fff;
+                    width: 350px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    font-size: 20px;
+                    cursor: pointer;
+                    font-weight: 400;
+                    font-family: 'Barlow Condensed', sans-serif;
+                }
+            }
+
+        }
     }
 
     .amount {
@@ -14,11 +97,12 @@
         justify-content: center;
         align-items: center;
         color: #FFF;
+        font-family: 'Quantico', sans-serif;
 
         
         .amountbox {
             list-style: none;
-            padding: 20px 10px;
+            padding: 0px 10px;
             width: 100%;
             
             .active {
@@ -26,10 +110,11 @@
             }
             .amountlist {
                 display: flex;
-                gap: 20px;
+                gap: 22px;
                 align-items: center;
-                padding: 10px;
+                padding: 8px;
                 border-radius: 10px;
+                border-bottom: 1px solid #e6e6e663;
 
 
                 .list {

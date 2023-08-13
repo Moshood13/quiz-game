@@ -26,7 +26,23 @@ const QuizApp = () => {
 
     return(
         <div className="quizapp">
-            <div className="question">1</div>
+            <div className="question-box">
+                <div className="timer">
+                    <span className="time">30</span>
+                    <span className="s">s</span>
+                </div>
+                <div className="question">
+                    <h4 className="quest">What is your name?</h4>
+                </div>
+                <div className="options">
+                    <ul className="opt-box">
+                        <li className="option">Ade</li>
+                        <li className="option">Ayo</li>
+                        <li className="option">Ada</li>
+                        <li className="option">Ali</li>
+                    </ul>
+                </div>
+            </div>
             <div className="amount">
                 <ul className="amountbox">
                     {MoneyList.map((m) => (
