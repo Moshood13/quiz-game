@@ -1,0 +1,100 @@
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    border: 3px solid #ffffff57;
+    width: 85%;
+    border-radius: 20px;
+    
+
+    .quest {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 800;
+        font-family: 'Barlow Condensed', sans-serif;
+    }
+}
+.options {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    .opt-box {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+
+        .option {
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            border: 1px solid #fff;
+            width: 350px;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            font-weight: 400;
+            font-family: 'Barlow Condensed', sans-serif;
+
+
+            &:hover {
+                background: rgb(18, 2, 189);
+            }
+        }
+
+        .active {
+            background: rgb(18, 2, 189);
+        }
+
+        .correct {
+            animation: correct 3s ease forwards;
+        }
+
+        @keyframes correct {
+            0%, 
+            25%,
+            45% {
+                background: rgb(18, 2, 189);
+            }
+            20%,
+            40%,
+            60% {
+                background: transparent;
+            }
+            80%,
+            100% {
+                background:rgb(0, 128, 0);
+            }
+        }
+
+        .wrong {
+            animation: wrong 3s ease forwards;
+        }
+
+        @keyframes wrong {
+            0%, 
+            25%,
+            45% {
+                background: rgb(18, 2, 189);
+            }
+            20%,
+            40%,
+            60% {
+                background: transparent;
+            }
+            80%,
+            100% {
+                background:rgb(223, 2, 2);
+            }
+        }
+    }
+
+
+}

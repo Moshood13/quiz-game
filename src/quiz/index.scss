@@ -19,7 +19,7 @@ font-family: 'Wallpoet', cursive; */
         .timer {
             color: #FFF;
             font-size: 2.5em;
-            border: 5px solid #ffffff57;
+            border: 5px dashed #ffffff57;
             border-radius: 100px;
             padding: 10px;
             width: 50px;
@@ -37,55 +37,6 @@ font-family: 'Wallpoet', cursive; */
                 opacity: 0.5;
                 font-size: 26px;
             }
-        }
-
-        .question {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0px auto;
-            border: 3px solid #ffffff57;
-            width: 85%;
-            border-radius: 20px;
-            
-
-            .quest {
-                color: #fff;
-                font-size: 20px;
-                font-weight: 800;
-                font-family: 'Barlow Condensed', sans-serif;
-            }
-        }
-        .options {
-            width: 85%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            justify-content: space-evenly;
-            
-            .opt-box {
-                list-style: none;
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                gap: 40px;
-
-                .option {
-                    color: #fff;
-                    display: flex;
-                    justify-content: center;
-                    border: 1px solid #fff;
-                    width: 350px;
-                    padding: 10px;
-                    border-radius: 10px;
-                    font-size: 20px;
-                    cursor: pointer;
-                    font-weight: 400;
-                    font-family: 'Barlow Condensed', sans-serif;
-                }
-            }
-
         }
     }
 
