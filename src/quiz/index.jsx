@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
+import useSound from "use-sound";
 import "./index.scss";
 import QuizBox from "../component/QuizBox";
 import Timer from "./Timer";
+import play from "../asset/play.mp3";
+import Start from "./Start";
 
 const QuizApp = () => {
     const [questNum, setQuestNum] = useState(1)
     const [stop, setStop] = useState(false)
     const [earned , setEarned] = useState("$ 0")
-
+    const [username, setUsername] = useState(null)
 
     const Data = [
         {
@@ -122,6 +125,12 @@ const QuizApp = () => {
         },
     ]
 
+    const handleClick = () => {
+        setStop(false);
+        setQuestNum(1);
+        setEarned("$ 0")
+    }
+
 
 
 
@@ -149,7 +158,18 @@ const QuizApp = () => {
 
     return (
         <div className="quizapp">
-            {stop ? (<h1 className="stop">You have won: {earned}</h1>)
+            {username ? (
+                <>
+                {stop ? (
+                <div className="end">
+                <h1 className="stop">
+                    <span className="top">Congratulations</span>
+                    You have won: <span className="amt-00 inline">{earned}</span>
+                    </h1>
+                    <button className="btn-01" onClick={handleClick}>Restart</button>
+                    </div>
+                    )
+                    
                 :
                 <>
                     <div className="question-box">
@@ -179,8 +199,16 @@ const QuizApp = () => {
                             ))}
                         </ul>
                     </div>
+                    <audio id="audio" loop autoPlay>
+                        <source src={play} type="audio/mp3"></source>
+                    </audio>
                 </>
-            }
+            }"
+                </>
+                
+            )
+             : <Start setUsername={setUsername} />}
+            
         </div>
     )
 }
