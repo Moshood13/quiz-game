@@ -147,12 +147,13 @@ font-family: 'Wallpoet', cursive; */
             .text {
                 background: rgba(3, 11, 83, 0.658);
                 font-size: 6em;
-                padding: 10px 20px;
+                padding: 10px 40px;
                 border-radius: 50px;
                 border: none;
                 color: #FFF;
                 margin-bottom: 1px;
                 font-family: 'Caprasimo', cursive;
+                text-decoration: line-through;
                 
             }
 
@@ -165,6 +166,7 @@ font-family: 'Wallpoet', cursive; */
                 border-radius: 20px;
                 background: transparent;
                 color: #FFF;
+                text-align: center;
 
                 &::placeholder {
                     color: #FFF;

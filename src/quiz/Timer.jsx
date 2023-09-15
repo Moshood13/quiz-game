@@ -17,7 +17,7 @@ const Timer = ({setStop, data}) => {
         }, 1000);
 
         return () => clearInterval(Interval)
-    }, [setStop, timer])
+    }, [setStop, timer, playWrong])
 
     useEffect(() => {
         setTimer(30)

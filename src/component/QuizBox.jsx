@@ -2,9 +2,7 @@ import { useEffect, useState } from "react";
 import useSound from "use-sound";
 import correct from "../asset/correct-answer.mp3";
 import wrong from "../asset/wrong-answer.mp3";
-import intro from "../asset/intro.mp3";
 import "./quizBox.scss";
-import ReactAudioPlayer from "react-audio-player";
 
 const QuizBox = ({ data, setQuestNum, questNum, setStop }) => {
 
@@ -25,7 +23,7 @@ const QuizBox = ({ data, setQuestNum, questNum, setStop }) => {
 
     useEffect(() => {
         setQuestion(randomQuestion())
-    }, [data])
+    }, [data, setQuestion])
 
     const Time = (duration, callback) => {
         setTimeout(() => {
